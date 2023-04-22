@@ -1,0 +1,16 @@
+<mat-card class="current-weather">
+  <div class="temp-menue">
+    <img class="icon" [src]="icon" alt="Icon"/>
+    <span class="temp">{{temp}}°C</span>
+    <span class="feels-like">Feels like: {{feelsLike}}°C</span>
+  </div>
+  <div class="max-min-temp">
+    <span class="max-temp">Max: {{tempMax}}°C</span>
+    <span class="min-temp">Min: {{tempMin}}°C</span>
+  </div>
+  <div class="side-information">
+    <span class="humidity">Humidity: {{humidity}}</span>
+    <span class="pressure">Pressure: {{pressure}}</span>
+  </div>
+</mat-card>
+

@@ -1,0 +1,11 @@
+<form  [formGroup]="form" (ngSubmit)="getCity(form)">
+  <mat-form-field class="city-search">
+    <mat-label> City </mat-label>
+    <input matInput formControlName="search" />
+    <mat-error *ngIf="">This field is required</mat-error>
+  </mat-form-field>
+  <div class="buttons">
+    <button class="submit-button" mat-raised-button type="submit">Enter</button>
+    <button class="clear-button" mat-raised-button type="submit" (click)="removeCity()">Clear</button>
+  </div>
+</form>

@@ -1,0 +1,15 @@
+<span class="day-timeline">{{
+  dayWether.weather[0].date | date : "dd.MM"
+}}</span>
+<div class="daily-overview">
+  <div *ngFor="let day of dayWether.weather">
+    <span class="date">{{ day.date | date : "H:mm" }}h</span>
+    <img
+      class="icon"
+      src="https://openweathermap.org/img/wn/{{ day.icon }}.png"
+      alt="Icon"
+    />
+    <span class="temp">{{ day.temp }}°C</span>
+    <span class="feels-like">Feels like: {{ day.feels_like }}°C</span>
+  </div>
+</div>

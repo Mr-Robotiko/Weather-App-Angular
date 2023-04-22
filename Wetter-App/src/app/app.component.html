@@ -1,0 +1,15 @@
+<app-city-search
+  (getCityName)="getCurrentWeatherData($event)"
+></app-city-search>
+<ng-container *ngIf="currentWeather$ | async as currentWeatherData">
+  <app-current-weather [getCurrentWeather]="currentWeatherData">
+  </app-current-weather>
+  <ng-container *ngIf="forecastWeather$ | async as forecastWeatherData">
+    <app-weekly-forecast [weeklyForecast]="forecastWeatherData">
+    </app-weekly-forecast>
+  </ng-container>
+  <app-weather-map></app-weather-map>
+</ng-container>
+<div class="error">
+  <span *ngIf="">Toll</span>
+</div>
